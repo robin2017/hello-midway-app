@@ -1,7 +1,8 @@
 import { provide } from 'midway';
 import { IUserService, IUserOptions, IUserResult } from '../interface';
 
-@provide('userService')
+//1、midway中@provide类似与spring中的@Component
+@provide()
 export class UserService implements IUserService {
 
   async getUser(options: IUserOptions): Promise<IUserResult> {
